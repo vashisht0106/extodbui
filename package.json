@@ -26,6 +26,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -44,5 +46,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://154.41.254.44:4000"
+  "proxy":"http://62.72.31.201:4000"
+
+
 }
