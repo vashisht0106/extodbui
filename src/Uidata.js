@@ -20,7 +20,7 @@ export const Uidata = () => {
     useEffect(() => {
         const fetchImages = async() => {
           try {
-            const { data } = await axios.get(`http://62.72.31.201/api/v1/getorg`);
+            const { data } = await axios.get(`http://62.72.31.201:4000/api/v1/getorg`);
 
             setImages(data);
 
