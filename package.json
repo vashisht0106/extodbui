@@ -1,7 +1,7 @@
 {
   "name": "stock-frontend",
   "version": "0.1.0",
-  "private": true,
+  "homepage": ".",
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
@@ -45,8 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy":"http://62.72.31.201:4000"
+  }
+  
 
 
 }

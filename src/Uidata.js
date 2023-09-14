@@ -5,7 +5,8 @@ import { span,Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFoote
 import { saveAs } from 'file-saver';
 import {Link} from "react-router-dom"
 export const Uidata = () => {
-
+  const axiosInstance=axios.create({baseURL:process.env.REACT_APP_BACKEND_URL})
+  
 
   const toast =useToast()
   const [images, setImages] =useState('')
@@ -20,7 +21,7 @@ export const Uidata = () => {
     useEffect(() => {
         const fetchImages = async() => {
           try {
-            const { data } = await axios.get(`/api/v1/getorg`);
+            const { data } = await axiosInstance.get(`/api/v1/getorg`);
 
             setImages(data);
 
@@ -145,7 +146,7 @@ var jsonData={
     'x-json-data': JSON.stringify(jsonData)},
    };
 try {
-const data=  await axios.post('/api/v1/edit',
+const data=  await axiosInstance.post('/api/v1/edit',
 formData,
 
 config

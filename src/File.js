@@ -7,6 +7,9 @@ import axios from 'axios'
 import { Uidata } from './Uidata'
 import { Link } from 'react-router-dom'
  const File = () => {
+
+const axiosInstance=axios.create({baseURL:process.env.REACT_APP_BACKEND_URL})
+
   const toast=useToast()
   const [selectedImage, setSelectedImage] = useState(null);
   useEffect(() => {
@@ -43,8 +46,12 @@ else if (selectedImage){
   const config = {
     headers: { "Content-Type": "multipart/form-data" },
    };
+
+
+
+
 try {
-const data=  await axios.post('/api/v1/upload',
+const data=  await axiosInstance.post('/api/v1/upload',
 formData,
  config
   )

@@ -6,12 +6,15 @@ import { Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, Mo
 import { saveAs } from 'file-saver';
 import {Link} from "react-router-dom"
 export const CopyFile = () => {
+
+  const axiosInstance=axios.create({baseURL:process.env.REACT_APP_BACKEND_URL})
+
   const toast =useToast()
   const [images, setImages] =useState('')
     useEffect(() => {
         const fetchImages = async() => {
           try {
-            const { data } = await axios.get(`/api/v1/get`);
+            const { data } = await axiosInstance.get(`/api/v1/get`);
 //console.log('data',data)
             setImages(data);
 
