@@ -14,7 +14,11 @@ export const CopyFile = () => {
     useEffect(() => {
         const fetchImages = async() => {
           try {
+<<<<<<< HEAD
             const { data } = await axiosInstance.get(`/api/v1/get`);
+=======
+            const { data } = await axios.get(`http://62.72.31.201:4000/api/v1/get`);
+>>>>>>> fab6c5054a23addc4cfd1320611a8e7df0ecaab5
 //console.log('data',data)
             setImages(data);
 
